@@ -10,6 +10,9 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+* {
+	box-sizing: border-box;
+}
 
 html {
 	color: #f0f0d8;
@@ -116,33 +119,27 @@ a {
 	margin-left: calc(-50vw + 50%);
 }
 
-/* デフォルト（リキッドレイアウト） */
-.container {
-	width: min(max(23.4375rem, 10vw), 80rem);
-	margin: 0 auto;
-}
-
-/* 全幅コンテンツ */
-.full-width {
-	width: 100vw;
-	max-width: 100%;
-	margin-left: calc(-50vw + 50%);
-}
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 body {
 	margin: 0;
 }
-.header {
-	height: 115px;
-}
 
-.main {
-	height: calc(100vh - 115px);
+section {
+	padding: clamp(7.5rem, 4.392rem + 13.26vw, 15rem) 4rem;
+	font-size: clamp(1rem, 0.767rem + 0.99vw, 1.563rem);
+	& h3 {
+		text-align: center;
+	}
+}
+.profile {
+	font-size: clamp(0.625rem, 0.496rem + 0.55vw, 0.938rem);
+	text-align: center;
 }
 .main-inner {
 	height: 100%;
+	height: calc(100vh - var(--header-height, 0px));
 }
 .dropdown {
 	position: relative;
@@ -171,11 +168,17 @@ body {
 	width: min(max(23.4375rem, 10vw), 80rem);
 	margin: 0 auto;
 }
+.br-sp {
+	display: none;
+}
 
 /* 画面幅が375px以下の場合（最小幅固定） */
 @media only screen and (max-width: 24.375rem) {
 	.container {
 		width: 100%;
+	}
+	.br-sp {
+		display: inline;
 	}
 	.flex-column-s {
 		flex-direction: column !important;
@@ -188,6 +191,7 @@ body {
 		& ul {
 			list-style-type: disc;
 			padding-left: 1em;
+			padding-bottom: 8rem;
 		}
 	}
 	.header {
@@ -199,18 +203,48 @@ body {
 			position: fixed;
 			bottom: 0;
 			z-index: 99;
+			padding: 2rem;
+			width: 100%;
 
 			& li {
 				flex: 1;
+				font-size: .9rem;
+				text-align: center;
 				padding-top: .8rem;
+				position: relative;
+			}
+			/* 奇数番目のliに#006c90のボーダーを適用 */
+			& li:nth-of-type(odd)::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				border-top: 5px solid #78aeb4; /* 奇数番目の色 */
+				display: block;
 			}
 
-			& li:nth-of-type(odd)::before {
-				border-top: 5px solid #585048;
+			/* 偶数番目のliに#f0f0d8のボーダーを適用 */
+			& li:nth-of-type(even)::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				border-top: 5px solid #f0f0d8; /* 偶数番目の色 */
+				display: block;
 			}
 		}
 		& .dropdown-menu {
 			display: none;
+		}
+	}
+	.pb-10 {
+		padding-bottom: 0;
+	}
+	section {
+		& h2 {
+			text-align: center;
 		}
 	}
 }
@@ -399,21 +433,6 @@ body {
 	padding-top: 2rem;
 }
 
-.pb-0 {
-	padding-bottom: 0;
-}
-.pb-1 {
-	padding-bottom: 0.25rem;
-}
-.pb-2 {
-	padding-bottom: 0.5rem;
-}
-.pb-3 {
-	padding-bottom: 1rem;
-}
-.pb-4 {
-	padding-bottom: 2rem;
-}
 .pb-5 {
 	padding-bottom: 3rem;
 }
@@ -529,6 +548,42 @@ body {
 .mr-4 {
 	margin-right: 2rem;
 }
+.more-content {
+	display: none;
+}
+
+.button {
+	background-color: #f0f0d8;
+	color: #006c90;
+	padding: 10px 20px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	display: block;
+	margin: 0 auto;
+	width: fit-content;
+	font-size: clamp(1rem, 0.767rem + 0.99vw, 1.563rem);
+}
+
+.button:hover {
+	opacity: 0.8;
+}
+
+.toggle-button {
+	font-size: clamp(1rem, 0.767rem + 0.99vw, 1.563rem);
+	background-color: #f0f0d8;
+	color: #006c90;
+	padding: 10px 20px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	display: block;
+	margin: 0 auto;
+}
+
+.toggle-button:hover {
+	opacity: 0.8;
+}
 
 /* ==========================================================================
      画像に関連するユーティリティクラス
@@ -537,6 +592,16 @@ body {
 /* 画像の幅と高さを調整 */
 .img-fluid {
 	width: 100%;
+	height: auto;
+}
+
+.img-half {
+	width: 50%;
+	height: auto;
+}
+
+.img-quarter {
+	width: 25%;
 	height: auto;
 }
 

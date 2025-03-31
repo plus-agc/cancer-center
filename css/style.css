@@ -21,7 +21,16 @@ html {
 	background-color: #006c90;
 }
 
-* {
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.container,
+.flex,
+.header,
+.main {
 	box-sizing: border-box;
 }
 

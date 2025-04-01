@@ -1,115 +1,103 @@
 <!DOCTYPE html>
 <html class="no-js" lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>がんゲノム医療室について</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <meta name="description" content="" />
 
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:image:alt" content="" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>がんゲノム医療室について</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <meta name="description" content="" />
 
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="icon.png" />
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:image:alt" content="" />
 
-    <link rel="manifest" href="site.webmanifest" />
-    <meta name="theme-color" content="#fafafa" />
-    <script>
-      (function (d) {
-        var config = {
-            kitId: "mbt0fpv",
-            scriptTimeout: 3000,
-            async: true,
-          },
-          h = d.documentElement,
-          t = setTimeout(function () {
-            h.className =
-              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
-          }, config.scriptTimeout),
-          tk = d.createElement("script"),
-          f = false,
-          s = d.getElementsByTagName("script")[0],
-          a;
-        h.className += " wf-loading";
-        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
-        tk.async = true;
-        tk.onload = tk.onreadystatechange = function () {
-          a = this.readyState;
-          if (f || (a && a != "complete" && a != "loaded")) return;
-          f = true;
-          clearTimeout(t);
-          try {
-            Typekit.load(config);
-          } catch (e) {}
-        };
-        s.parentNode.insertBefore(tk, s);
-      })(document);
-    </script>
-  </head>
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icon.png" />
 
-  <body>
-    <!-- Add your site or application content here -->
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="theme-color" content="#fafafa" />
+  <script>
+    (function (d) {
+      var config = {
+        kitId: "mbt0fpv",
+        scriptTimeout: 3000,
+        async: true,
+      },
+        h = d.documentElement,
+        t = setTimeout(function () {
+          h.className =
+            h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+        }, config.scriptTimeout),
+        tk = d.createElement("script"),
+        f = false,
+        s = d.getElementsByTagName("script")[0],
+        a;
+      h.className += " wf-loading";
+      tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+      tk.async = true;
+      tk.onload = tk.onreadystatechange = function () {
+        a = this.readyState;
+        if (f || (a && a != "complete" && a != "loaded")) return;
+        f = true;
+        clearTimeout(t);
+        try {
+          Typekit.load(config);
+        } catch (e) { }
+      };
+      s.parentNode.insertBefore(tk, s);
+    })(document);
+  </script>
+</head>
 
-    <header id="header" class="header">
+<body>
+  <!-- Add your site or application content here -->
+
+  <header id="header" class="header">
+    <div class="container">
+      <nav class="flex justify-between pt-4">
+        <div class="header-logo">
+          <a href="/" aria-label="Header Logo">
+            <img src="img/logo.svg" alt="がんゲノム医療室" class="img-fluid" />
+          </a>
+        </div>
+        <ul class="flex list gap-3">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">がんゲノム<br class="br-sp" />医療室<br class="br-sp" />について</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">ごあいさつ</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="examination.html" class="dropdown-toggle">がん遺伝子<br class="br-sp" />パネル検査<br class="br-sp" />とは</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">メリット</a></li>
+              <li><a href="#">検査の種類</a></li>
+              <li><a href="#">検査の流れ</a></li>
+              <li><a href="#">保険適用について</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="qa.html">よくある<br class="br-sp" />質問</a>
+          </li>
+          <li class="dropdown">
+            <a href="notice.html" class="dropdown-toggle">医療機関の<br class="br-sp" />みなさまへ</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">外来受診の手順</a></li>
+              <li><a href="#">診療情報提供書</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="main">
+    <section>
       <div class="container">
-        <nav class="flex justify-between pt-4">
-          <div class="header-logo">
-            <a href="/" aria-label="Header Logo">
-              <img
-                src="img/logo.svg"
-                alt="がんゲノム医療室"
-                class="img-fluid"
-              />
-            </a>
-          </div>
-          <ul class="flex list gap-3">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle"
-                >がんゲノム<br class="br-sp" />医療室<br
-                  class="br-sp"
-                />について</a
-              >
-              <ul class="dropdown-menu">
-                <li><a href="#">ごあいさつ</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle"
-                >がん遺伝子<br class="br-sp" />パネル検査<br
-                  class="br-sp"
-                />とは</a
-              >
-              <ul class="dropdown-menu">
-                <li><a href="#">メリット</a></li>
-                <li><a href="#">検査の種類</a></li>
-                <li><a href="#">検査の流れ</a></li>
-                <li><a href="#">保険適用について</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">よくある<br class="br-sp" />質問</a>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle"
-                >医療機関の<br class="br-sp" />みなさまへ</a
-              >
-              <ul class="dropdown-menu">
-                <li><a href="#">外来受診の手順</a></li>
-                <li><a href="#">診療情報提供書</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main id="main" class="main">
-      <div class="container">
-        <section class="flex justify-center align-center flex-column-s">
+        <div class="flex justify-center align-center flex-column-s">
           <div class="flex-1">
             <img src="img/about.svg" alt="がんゲノム医療室" class="img-hald" />
           </div>
@@ -118,9 +106,12 @@
               「ゲノム（genome）」とは"gene（遺伝子）"と集合をあらわす"-ome"を組み合わせた言葉で、生物のもつ遺伝子（遺伝情報）の全体を指します。
             </p>
           </div>
-        </section>
-        <img src="img/genome.svg" alt="ゲノム配列イメージ" class="img-fluid" />
-        <section class="flex justify-center align-center flex-column-s">
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="flex justify-center align-center flex-column-s">
           <div class="flex-1">
             <h2>
               がんゲノム<br />
@@ -134,9 +125,12 @@
             </p>
             <a href="#" class="button">エキスパートパネルとは？</a>
           </div>
-        </section>
-        <img src="img/genome.svg" alt="ゲノム配列イメージ" class="img-fluid" />
-        <section class="flex justify-center align-center flex-column-s">
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="flex justify-center align-center flex-column-s">
           <div class="flex-1">
             <h2>ごあいさつ</h2>
             <div class="flex flex-column-s gap-5">
@@ -161,69 +155,60 @@
               <p>
                 近年、コンパニオン診断やがん遺伝子パネル検査とよばれる遺伝子検査の技術進歩と、分子生物学の進歩から創薬された分子標的薬の開発とが結びついたことにより、これまでのような疾患ごとの治療方法の選択ではなく、患者個々人の遺伝子情報に基づいた、最も適切な治療方法を選択することが可能になりました。各種がん関連遺伝子に対する創薬開発はさらに進み、次々と新規薬剤が承認されてきています。連動して、医療現場もまた大きく変化しています。第３期がん対策推進基本計画のもと、全国でがんゲノム医療の体制づくりが急ピッチで進められています。当院はこれまで、がんゲノム中核拠点病院(全国11施設)の東北大学病院の連携病院として協力体制のもとで実働してきましたが、2019年9月に厚生労働省より新たに策定された「がんゲノム医療拠点病院」(全国34施設/東北地方2施設)に指定されました。これからは、自施設で遺伝子パネル検査を完結できる医療機関となります。同年10月に腫瘍センター内に「がんゲノム医療室」を開設しました。そして、現在、がんに関わる基礎、臨床の各講座が集結して協力体制を構築し、各種専門家による協議である「エキスパートパネル」を毎週開催しております。
               </p>
-
               <p>
                 　遺伝子パネル検査により得られた全国のゲノム医療の情報は、2018年に国立がん研究センター内に開設された、がんゲノム情報管理センター（C-CAT：Center）
               </p>
             </div>
             <button class="toggle-button">続きを読む</button>
           </div>
-        </section>
-      </div>
-    </main>
-    <footer id="footer" class="footer p-4">
-      <div class="container">
-        <div
-          class="flex flex-wrap flex-column-s justify-between align-center gap-5"
-        >
-          <div class="flex-1 self-start">
-            <img src="img/genome.svg" alt="" class="img-fluid" />
-          </div>
-          <div class="flex-1 footer-logo">
-            <div>
-              <a href="" aria-label="Footer Logo">
-                <img
-                  src="img/logo.svg"
-                  alt="がんゲノム医療室"
-                  class="img-fluid"
-                />
-              </a>
-            </div>
-            <address class="mt-3">
-              <p class="m-0">〒036-8563</p>
-              <p class="m-0">青森県弘前市本町53番地</p>
-              <p class="m-0">
-                <a href="tel:0172-35-5111">TEL.0172-35-5111（代表）</a>
-              </p>
-              <p class="m-0">
-                <a href="fax:0172-39-5338">FAX.0172-39-5338</a>
-              </p>
-            </address>
-          </div>
-          <div class="flex-1 self-start">
-            <a href="tel:0172-39-5174" aria-label="Footer Contact">
-              <img
-                src="img/contact.svg"
-                alt="がん相談支援センター"
-                class="img-fluid"
-              />
-            </a>
-            <ul class="mt-3">
-              <li><a href="">プライバシーポリシー</a></li>
-              <li><a href="">サイトポリシー</a></li>
-              <li><a href="">サイトマップ</a></li>
-            </ul>
-          </div>
         </div>
       </div>
-    </footer>
-    <script src="js/app.js" defer></script>
-    <script>
-      document
-        .querySelectorAll("*")
-        .forEach((el) =>
-          el.clientWidth > document.body.clientWidth ? console.log(el) : null
-        );
-    </script>
-  </body>
+    </section>
+  </main>
+  <footer id="footer" class="footer p-4">
+    <div class="container">
+      <div class="flex flex-wrap flex-column-s justify-between align-center gap-5">
+        <div class="flex-1 self-start">
+          <img src="img/genome.svg" alt="" class="img-fluid" />
+        </div>
+        <div class="flex-1 footer-logo">
+          <div>
+            <a href="" aria-label="Footer Logo">
+              <img src="img/logo.svg" alt="がんゲノム医療室" class="img-fluid" />
+            </a>
+          </div>
+          <address class="mt-3">
+            <p class="m-0">〒036-8563</p>
+            <p class="m-0">青森県弘前市本町53番地</p>
+            <p class="m-0">
+              <a href="tel:0172-35-5111">TEL.0172-35-5111（代表）</a>
+            </p>
+            <p class="m-0">
+              <a href="fax:0172-39-5338">FAX.0172-39-5338</a>
+            </p>
+          </address>
+        </div>
+        <div class="flex-1 self-start">
+          <a href="tel:0172-39-5174" aria-label="Footer Contact">
+            <img src="img/contact.svg" alt="がん相談支援センター" class="img-fluid" />
+          </a>
+          <ul class="mt-3">
+            <li><a href="">プライバシーポリシー</a></li>
+            <li><a href="">サイトポリシー</a></li>
+            <li><a href="">サイトマップ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/app.js" defer></script>
+  <script>
+    document
+      .querySelectorAll("*")
+      .forEach((el) =>
+        el.clientWidth > document.body.clientWidth ? console.log(el) : null
+      );
+  </script>
+</body>
+
 </html>

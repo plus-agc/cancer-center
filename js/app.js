@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				moreContent.style.display === ""
 			) {
 				moreContent.style.display = "block";
-				toggleButton.textContent = "続きを閉じる";
+				toggleButton.textContent = "閉じる";
 			} else {
 				moreContent.style.display = "none";
 				toggleButton.textContent = "続きを表示";
@@ -143,5 +143,30 @@ document.addEventListener("DOMContentLoaded", () => {
 				}
 			}
 		});
+	}
+
+	const expertButton = document.getElementById("expertButton");
+
+	if (expertButton) {
+		const summaryText = expertButton.previousElementSibling;
+
+		if (summaryText) {
+			let expanded = false;
+
+			expertButton.addEventListener("click", (e) => {
+				e.preventDefault();
+				if (!expanded) {
+					summaryText.textContent =
+						"エキスパートパネルとは、がんゲノム医療において遺伝子情報を解析し、専門家によって最適な治療法を協議する会議のことです。";
+					expertButton.textContent = "閉じる";
+					expanded = true;
+				} else {
+					summaryText.textContent =
+						"　がん医療は日進月歩で大きく変化してきています。そして今、遺伝子情報に基づく個別化治療が始まり、がんゲノム医療として新たな時代を迎えています。がんの原因は遺伝子の変異にあります。";
+					expertButton.textContent = "エキスパートパネルとは？";
+					expanded = false;
+				}
+			});
+		}
 	}
 });

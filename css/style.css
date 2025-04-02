@@ -36,7 +36,6 @@ a {
 	text-decoration: none;
 }
 
-/* 全幅コンテンツ */
 .full-width {
 	position: absolute;
 	left: 0;
@@ -144,7 +143,6 @@ h2 {
 	padding: 8px 0;
 }
 
-/* デフォルト（リキッドレイアウト） */
 .container {
 	width: min(max(23.4375rem, 10vw), 80rem);
 	margin: 0 auto;
@@ -186,73 +184,58 @@ h2 {
 	border-radius: 16px;
 }
 
-/* フレックスコンテナ（横並び・縦並び） */
 .flex {
 	display: flex;
 }
 
 .flex-row {
 	flex-direction: row;
-	/* 横並び（デフォルト） */
 }
 
 .flex-column {
 	flex-direction: column;
-	/* 縦並び */
 }
 
 .flex-wrap {
 	flex-wrap: wrap;
-	/* 折り返し */
 }
 
-/* フレックスアイテムの配置 */
 .justify-start {
 	justify-content: flex-start;
-	/* 左寄せ（デフォルト） */
 }
 
 .justify-center {
 	justify-content: center;
-	/* 中央揃え */
 }
 
 .justify-end {
 	justify-content: flex-end;
-	/* 右寄せ */
 }
 
 .justify-between {
 	justify-content: space-between;
-	/* 均等配置（両端揃え） */
 }
 
 .justify-around {
 	justify-content: space-around;
-	/* 均等配置（余白あり） */
 }
 
 .align-start {
 	align-items: flex-start;
-	/* 上寄せ */
 }
 
 .align-center {
 	align-items: center;
-	/* 縦方向中央揃え */
 }
 
 .align-end {
 	align-items: flex-end;
-	/* 下寄せ */
 }
 
 .align-stretch {
 	align-items: stretch;
-	/* 高さを均等に伸ばす */
 }
 
-/* フレックスアイテムのサイズ調整 */
 .flex-1 {
 	flex: 1;
 }
@@ -265,7 +248,6 @@ h2 {
 	flex: 3;
 }
 
-/* フレックスアイテムの個別配置 */
 .self-start {
 	align-self: flex-start;
 }
@@ -278,7 +260,6 @@ h2 {
 	align-self: flex-end;
 }
 
-/* フレックスコンテナの間隔調整 */
 .gap-0 {
 	gap: 0;
 }
@@ -303,7 +284,6 @@ h2 {
 	gap: 2rem;
 }
 
-/* Padding Utility Classes */
 .p-0 {
 	padding: 0;
 }
@@ -348,7 +328,6 @@ h2 {
 	padding: 8rem;
 }
 
-/* Margin Utility Classes */
 .m-0 {
 	margin: 0;
 }
@@ -393,7 +372,6 @@ h2 {
 	margin: 8rem;
 }
 
-/* Padding for specific sides */
 .pt-0 {
 	padding-top: 0;
 }
@@ -478,7 +456,6 @@ h2 {
 	padding-right: 2rem;
 }
 
-/* Margin for specific sides */
 .mt-0 {
 	margin-top: 0;
 }
@@ -492,7 +469,7 @@ h2 {
 }
 
 .mt-3 {
-	margin-top: 1rem;
+	margin-top: 2rem;
 }
 
 .mt-4 {
@@ -583,6 +560,22 @@ h2 {
 	margin-right: 2rem;
 }
 
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-justify {
+	text-align: justify;
+}
+
 .more-content {
 	display: none;
 }
@@ -620,11 +613,6 @@ h2 {
 	opacity: 0.8;
 }
 
-/* ==========================================================================
-     画像に関連するユーティリティクラス
-     ========================================================================== */
-
-/* 画像の幅と高さを調整 */
 .img-fluid {
 	width: 100%;
 	height: auto;
@@ -642,34 +630,24 @@ h2 {
 
 .img-cover {
 	object-fit: cover;
-	/* アスペクト比を維持しつつ、画像を要素に収める */
 }
 
 .img-contain {
 	object-fit: contain;
-	/* アスペクト比を維持し、要素内に収める */
 }
 
-/* 画像を円形にする */
 .img-circle {
 	border-radius: 50%;
 }
 
-/* 画像の角を丸くする */
 .img-rounded {
 	border-radius: 0.25rem;
 }
 
-/* 画像に影を付ける */
 .img-shadow {
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* ==========================================================================
-     Width Utility Classes
-     ========================================================================== */
-
-/* 幅を指定 */
 .w-0 {
 	width: 0%;
 }
@@ -714,22 +692,18 @@ h2 {
 	width: 100%;
 }
 
-/* 自動幅調整 */
 .w-auto {
 	width: auto;
 }
 
-/* 最大幅指定 */
 .w-max {
 	width: max-content;
 }
 
-/* 最小幅指定 */
 .w-min {
 	width: min-content;
 }
 
-/* 画面幅が1280px以上の場合（最大幅固定） */
 @media only screen and (min-width: 80rem) {
 	.container {
 		width: 80rem;
@@ -740,7 +714,6 @@ h2 {
 	}
 }
 
-/* 画面幅が375px以下の場合（最小幅固定） */
 @media only screen and (max-width: 27.5rem) {
 	.container {
 		width: 100%;
@@ -788,7 +761,6 @@ h2 {
 				position: relative;
 			}
 
-			/* 奇数番目のliに#006c90のボーダーを適用 */
 			& .header__list-item:nth-of-type(odd)::before {
 				content: "";
 				position: absolute;
@@ -796,11 +768,10 @@ h2 {
 				left: 0;
 				width: 100%;
 				border-top: 6px solid #78aeb4;
-				/* 奇数番目の色 */
+
 				display: block;
 			}
 
-			/* 偶数番目のliに#f0f0d8のボーダーを適用 */
 			& .header__list-item:nth-of-type(even)::before {
 				content: "";
 				position: absolute;
@@ -808,7 +779,6 @@ h2 {
 				left: 0;
 				width: 100%;
 				border-top: 8px solid #f0f0d8;
-				/* 偶数番目の色 */
 				display: block;
 			}
 		}
@@ -840,7 +810,11 @@ h2 {
 		background-image: url("../img/genome-sp.svg");
 	}
 
-	.align-start-s {
-		align-items: flex-start;
+	.align-center-s {
+		align-items: center;
+	}
+
+	.text-center-s {
+		text-align: center;
 	}
 }

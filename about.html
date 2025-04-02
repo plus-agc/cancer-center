@@ -54,9 +54,14 @@
   </head>
 
   <body>
-    <!-- Add your site or application content here -->
-
     <header id="header" class="header">
+      <div class="pt-3 header__bg">
+        <img
+          src="img/genome-sp.svg"
+          alt="ゲノム配列の装飾画像"
+          class="img-fluid"
+        />
+      </div>
       <div class="container">
         <nav class="flex justify-between pt-4">
           <div class="header-logo">
@@ -127,9 +132,17 @@
     <main id="main" class="main">
       <section>
         <div class="container">
-          <div class="flex justify-center align-center flex-column-s">
+          <div
+            class="flex justify-center align-start align-center-s flex-column-s"
+          >
             <div class="flex-1">
-              <img src="img/about.svg" alt="がんゲノム医療室の紹介画像" />
+              <img
+                src="img/about.svg"
+                alt="がんゲノム医療室の紹介画像"
+                class="img-fluid"
+                width=""
+                height=""
+              />
             </div>
             <div class="flex-1">
               <p>
@@ -141,7 +154,9 @@
       </section>
       <section>
         <div class="container">
-          <div class="flex justify-center align-start flex-column-s">
+          <div
+            class="flex justify-center align-start align-center-s flex-column-s"
+          >
             <div class="flex-1">
               <h2 class="mt-0">
                 がんゲノム<br />
@@ -153,14 +168,18 @@
                 弘前大学医学部附属病院は2019年9月に厚生労働省から「がんゲノム医療拠点病院」の指定を受け、同年10月に腫瘍センター内に「がんゲノム医療室」を開設しました。
                 各領域の医師、薬剤師、看護師等多職種で構成される組織で、「エキスパートパネル」を毎週開催しております。
               </p>
-              <a href="#" class="button">エキスパートパネルとは？</a>
+              <a href="#" id="expertButton" class="button"
+                >エキスパートパネルとは？</a
+              >
             </div>
           </div>
         </div>
       </section>
       <section>
         <div class="container">
-          <div class="flex justify-center align-start flex-column-s">
+          <div
+            class="flex justify-center align-start align-center-s flex-column-s"
+          >
             <div class="flex-1">
               <h2 id="greeting" class="mt-0 anchor-offset">ごあいさつ</h2>
               <div class="flex flex-column-s gap-5">

@@ -1,91 +1,147 @@
-document.addEventListener("DOMContentLoaded", function () {
-	// すべてのドロップダウンリンクを選択
-	var dropdowns = document.querySelectorAll(".dropdown");
+document.addEventListener("DOMContentLoaded", () => {
+	const dropdowns = document.querySelectorAll(".dropdown");
 
-	dropdowns.forEach(function (dropdown) {
-		var dropdownMenu = dropdown.querySelector(".dropdown-menu");
-		var dropdownToggle = dropdown.querySelector(".dropdown-toggle");
+	for (const dropdown of dropdowns) {
+		const dropdownMenu = dropdown.querySelector(".dropdown-menu");
+		const dropdownToggle = dropdown.querySelector(".dropdown-toggle");
 
-		// マウスが乗ったときにドロップダウンメニューを表示
-		dropdown.addEventListener("mouseenter", function () {
-			dropdownMenu.classList.add("is-active");
+		dropdown.addEventListener("mouseenter", () => {
+			dropdownMenu.classList.add("dropdown-menu--active");
 		});
 
-		// マウスが離れたときにドロップダウンメニューを非表示
-		dropdown.addEventListener("mouseleave", function () {
-			dropdownMenu.classList.remove("is-active");
+		dropdown.addEventListener("mouseleave", () => {
+			dropdownMenu.classList.remove("dropdown-menu--active");
 		});
 
-		// ドロップダウントグルがクリックされたときはリンク先に遷移
-		dropdownToggle.addEventListener("click", function (event) {
-			// イベントの伝播を止めず、デフォルトの挙動（リンク遷移）を許可
-		});
-	});
+		dropdownToggle.addEventListener("click", (event) => {});
+	}
 
-	// タッチデバイス対応
-	if ("ontouchstart" in window) {
-		dropdowns.forEach(function (dropdown) {
-			var dropdownMenu = dropdown.querySelector(".dropdown-menu");
-			var dropdownToggle = dropdown.querySelector(".dropdown-toggle");
-			var isMenuOpen = false;
+	if (
+		"ontouchstart" in window &&
+		window.matchMedia("(min-width: 768px)").matches
+	) {
+		for (const dropdown of dropdowns) {
+			const dropdownMenu = dropdown.querySelector(".dropdown-menu");
+			const dropdownToggle = dropdown.querySelector(".dropdown-toggle");
+			let isMenuOpen = false;
 
-			dropdown.addEventListener("touchstart", function (event) {
+			dropdown.addEventListener("touchstart", (event) => {
 				if (!isMenuOpen && event.target === dropdownToggle) {
 					event.preventDefault();
 					isMenuOpen = true;
 
-					dropdowns.forEach(function (otherDropdown) {
+					for (const otherDropdown of dropdowns) {
 						if (otherDropdown !== dropdown) {
-							otherDropdown.querySelector(".dropdown-menu").classList.remove("is-active");
+							otherDropdown
+								.querySelector(".dropdown-menu")
+								.classList.remove("dropdown-menu--active");
 						}
-					});
+					}
 
-					dropdownMenu.classList.add("is-active");
+					dropdownMenu.classList.add("dropdown-menu--active");
 				} else if (isMenuOpen && event.target === dropdownToggle) {
 					isMenuOpen = false;
 				}
 			});
-		});
+		}
 
-		document.addEventListener("touchstart", function (event) {
-			var clickedInsideDropdown = false;
+		document.addEventListener("touchstart", (event) => {
+			let clickedInsideDropdown = false;
 
-			dropdowns.forEach(function (dropdown) {
+			for (const dropdown of dropdowns) {
 				if (dropdown.contains(event.target)) {
 					clickedInsideDropdown = true;
 				}
-			});
+			}
 
 			if (!clickedInsideDropdown) {
-				dropdowns.forEach(function (dropdown) {
-					dropdown.querySelector(".dropdown-menu").classList.remove("is-active");
-				});
+				for (const dropdown of dropdowns) {
+					dropdown
+						.querySelector(".dropdown-menu")
+						.classList.remove("dropdown-menu--active");
+				}
 			}
 		});
 	}
 
-	// ヘッダーの高さを取得して、CSS変数に設定
-	function setHeaderHeight() {
+	const setHeaderHeight = () => {
 		const header = document.querySelector(".header");
 		if (header) {
 			const headerHeight = header.offsetHeight;
-			document.documentElement.style.setProperty("--header-height", headerHeight + "px");
+			document.documentElement.style.setProperty(
+				"--header-height",
+				`${headerHeight}px`,
+			);
 		}
-	}
+	};
 
 	setHeaderHeight();
 	window.addEventListener("resize", setHeaderHeight);
 	window.addEventListener("load", setHeaderHeight);
 
-	// コンテンツの表示/非表示
-	document.querySelector(".toggle-button").addEventListener("click", function () {
-		var moreContent = document.querySelector(".more-content");
-		if (moreContent.style.display === "none" || moreContent.style.display === "") {
-			moreContent.style.display = "block";
-			this.textContent = "続きを閉じる";
-		} else {
-			moreContent.style.display = "none";
-			this.textContent = "続きを表示";
+	const toggleButton = document.querySelector(".toggle-button");
+	if (toggleButton) {
+		toggleButton.addEventListener("click", () => {
+			const moreContent = document.querySelector(".more-content");
+			if (
+				moreContent.style.display === "none" ||
+				moreContent.style.display === ""
+			) {
+				moreContent.style.display = "block";
+				toggleButton.textContent = "続きを閉じる";
+			} else {
+				moreContent.style.display = "none";
+				toggleButton.textContent = "続きを表示";
+			}
+		});
+	}
+
+	const backToTop = document.getElementById("backToTop");
+	if (backToTop) {
+		window.addEventListener("scroll", () => {
+			if (window.scrollY > 300) {
+				backToTop.classList.add("back-to-top--visible");
+			} else {
+				backToTop.classList.remove("back-to-top--visible");
+			}
+		});
+	}
+
+	for (const img of document.querySelectorAll("img")) {
+		img.setAttribute("loading", "lazy");
+
+		if (!img.hasAttribute("width") || !img.hasAttribute("height")) {
+			const tempImg = new Image();
+			tempImg.src = img.src;
+			tempImg.onload = () => {
+				if (!img.hasAttribute("width")) {
+					img.setAttribute("width", this.naturalWidth);
+				}
+				if (!img.hasAttribute("height")) {
+					img.setAttribute("height", this.naturalHeight);
+				}
+			};
 		}
-	});
+	}
+
+	for (const anchor of document.querySelectorAll('a[href^="#"]')) {
+		anchor.addEventListener("click", (e) => {
+			const targetId = anchor.getAttribute("href");
+			if (targetId.length > 1) {
+				const targetElement = document.querySelector(targetId);
+				if (targetElement) {
+					e.preventDefault();
+					const offset = 100;
+					const top =
+						targetElement.getBoundingClientRect().top +
+						window.pageYOffset -
+						offset;
+					window.scrollTo({
+						top,
+						behavior: "smooth",
+					});
+				}
+			}
+		});
+	}
 });

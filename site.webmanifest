@@ -1,12 +1,14 @@
 {
-  "short_name": "",
-  "name": "",
-  "icons": [{
-    "src": "icon.png",
-    "type": "image/png",
-    "sizes": "192x192"
-  }],
-  "start_url": "/?utm_source=homescreen",
-  "background_color": "#fafafa",
-  "theme_color": "#fafafa"
+	"short_name": "がんゲノム医療室",
+	"name": "がんゲノム医療室",
+	"icons": [
+		{
+			"src": "icon.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		}
+	],
+	"start_url": "/?utm_source=homescreen",
+	"background_color": "#006C90",
+	"theme_color": "#F0F0D8"
 }

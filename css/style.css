@@ -1,90 +1,16 @@
-/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
-
-/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
 * {
 	box-sizing: border-box;
 }
 
 html {
 	color: #f0f0d8;
-	font-size: 0.875em;
-	line-height: 1.4;
+	font-size: 0.875rem;
+	line-height: 1.8;
 	font-family: "a-otf-ud-shin-maru-go-pr6n", sans-serif;
-	font-weight: 300;
+	font-weight: 600;
 	font-style: normal;
 	background-color: #006c90;
-}
-
-/*
-   * Remove text-shadow in selection highlight:
-   * https://twitter.com/miketaylr/status/12228805301
-   *
-   * Customize the background color to match your design.
-   */
-
-::-moz-selection {
-	background: #b3d4fc;
-	text-shadow: none;
-}
-
-::selection {
-	background: #b3d4fc;
-	text-shadow: none;
-}
-
-/*
-   * A better looking default horizontal rule
-   */
-
-hr {
-	display: block;
-	height: 1px;
-	border: 0;
-	border-top: 1px solid #ccc;
-	margin: 1em 0;
-	padding: 0;
-}
-
-/*
-   * Remove the gap between audio, canvas, iframes,
-   * images, videos and the bottom of their containers:
-   * https://github.com/h5bp/html5-boilerplate/issues/440
-   */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-	vertical-align: middle;
-}
-
-/*
-   * Remove default fieldset styles.
-   */
-
-fieldset {
-	border: 0;
-	margin: 0;
-	padding: 0;
-}
-
-/*
-   * Allow only vertical resizing of textareas.
-   */
-
-textarea {
-	resize: vertical;
+	scroll-behavior: smooth;
 }
 
 ul,
@@ -93,9 +19,6 @@ ol {
 	padding: 0;
 }
 
-/* ==========================================================================
-     Author's custom styles
-     ========================================================================== */
 .list {
 	list-style: none;
 }
@@ -103,7 +26,7 @@ ol {
 .footer {
 	background-color: #585048;
 
-	& ul {
+	& .footer__list {
 		padding-left: 1em;
 	}
 }
@@ -121,9 +44,32 @@ a {
 	max-width: 100vw;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+.back-to-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	padding: 10px 15px;
+	border-radius: 5px;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+	display: none;
+	z-index: 999;
+}
+
+.back-to-top--visible {
+	display: block;
+	opacity: 1;
+}
+
+.back-to-top a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.back-to-top a:hover {
+	text-decoration: underline;
+}
+
 body {
 	margin: 0;
 }
@@ -138,9 +84,7 @@ section {
 	}
 }
 
-section:nth-of-type(2),
-section:nth-of-type(3),
-section:nth-of-type(4) {
+section:not(:first-of-type) {
 	margin-top: 210px;
 }
 
@@ -164,11 +108,13 @@ section:last-of-type::after {
 
 h2 {
 	font-size: clamp(2.25rem, 1.732rem + 2.21vw, 3.5rem);
+	line-height: 1.4;
 }
 
 .profile {
 	font-size: clamp(0.625rem, 0.496rem + 0.55vw, 0.938rem);
 	text-align: center;
+	line-height: 1.4;
 }
 
 .main-inner {
@@ -190,11 +136,11 @@ h2 {
 	list-style-type: none;
 }
 
-.dropdown-menu.is-active {
+.dropdown-menu--active {
 	display: block;
 }
 
-.dropdown-menu li {
+.dropdown-menu__item {
 	padding: 8px 0;
 }
 
@@ -210,17 +156,17 @@ h2 {
 }
 
 .qa-attention {
-	background-color: #F0F0D8;
-	color: #006C90;
+	background-color: #f0f0d8;
+	color: #006c90;
 	padding: 20px;
 	border-radius: 16px;
 	font-weight: bold;
 }
 
 .notice-link {
-	background-color: #F0F0D8;
+	background-color: #f0f0d8;
 	padding: 20px;
-	color: #006C90;
+	color: #006c90;
 	font-weight: bold;
 	border-radius: 16px;
 	display: block;
@@ -238,19 +184,6 @@ h2 {
 	padding: 20px;
 	border: solid 1px #f0f0d8;
 	border-radius: 16px;
-}
-
-
-
-/* 画面幅が1280px以上の場合（最大幅固定） */
-@media only screen and (min-width: 80rem) {
-	.container {
-		width: 80rem;
-	}
-
-	nav ul {
-		display: block;
-	}
 }
 
 /* フレックスコンテナ（横並び・縦並び） */
@@ -796,331 +729,14 @@ h2 {
 	width: min-content;
 }
 
-/* ==========================================================================
-     Helper classes
-     ========================================================================== */
-
-/*
-   * Hide visually and from screen readers
-   */
-
-.hidden,
-[hidden] {
-	display: none !important;
-}
-
-/*
-   * Hide only visually, but have it available for screen readers:
-   * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-   *
-   * 1. For long content, line feeds are not interpreted as spaces and small width
-   *    causes content to wrap 1 word per line:
-   *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
-   */
-
-.visually-hidden {
-	border: 0;
-	clip: rect(0, 0, 0, 0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	white-space: nowrap;
-	width: 1px;
-	/* 1 */
-}
-
-/*
-   * Extends the .visually-hidden class to allow the element
-   * to be focusable when navigated to via the keyboard:
-   * https://www.drupal.org/node/897638
-   */
-
-.visually-hidden.focusable:active,
-.visually-hidden.focusable:focus {
-	clip: auto;
-	height: auto;
-	margin: 0;
-	overflow: visible;
-	position: static;
-	white-space: inherit;
-	width: auto;
-}
-
-/*
-   * Hide visually and from screen readers, but maintain layout
-   */
-
-.invisible {
-	visibility: hidden;
-}
-
-/*
-   * Clearfix: contain floats
-   *
-   * The use of `table` rather than `block` is only necessary if using
-   * `::before` to contain the top-margins of child elements.
-   */
-
-.clearfix::before,
-.clearfix::after {
-	content: "";
-	display: table;
-}
-
-.clearfix::after {
-	clear: both;
-}
-
-/* ==========================================================================
-     EXAMPLE Media Queries for Responsive Design.
-     These examples override the primary ('mobile first') styles.
-     Modify as content requires.
-     ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-	/* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-(-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 1.25dppx),
-(min-resolution: 120dpi) {
-	/* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-     Print styles.
-     Inlined to avoid the additional HTTP request:
-     https://www.phpied.com/delay-loading-your-print-css/
-     ========================================================================== */
-
-@media print {
-
-	*,
-	*::before,
-	*::after {
-		background: #fff !important;
-		color: #000 !important;
-		/* Black prints faster */
-		box-shadow: none !important;
-		text-shadow: none !important;
+/* 画面幅が1280px以上の場合（最大幅固定） */
+@media only screen and (min-width: 80rem) {
+	.container {
+		width: 80rem;
 	}
 
-	a,
-	a:visited {
-		text-decoration: underline;
-	}
-
-	a:hover {
-		transition: opacity 0.3s;
-	}
-
-	a[href]::after {
-		content: " (" attr(href) ")";
-	}
-
-	abbr[title]::after {
-		content: " (" attr(title) ")";
-	}
-
-	/*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-	a[href^="#"]::after,
-	a[href^="javascript:"]::after {
-		content: "";
-	}
-
-	pre {
-		white-space: pre-wrap !important;
-	}
-
-	pre,
-	blockquote {
-		border: 1px solid #999;
-		page-break-inside: avoid;
-	}
-
-	tr,
-	img {
-		page-break-inside: avoid;
-	}
-
-	p,
-	h2,
-	h3 {
-		orphans: 3;
-		widows: 3;
-	}
-
-	h2,
-	h3 {
-		page-break-after: avoid;
-	}
-}
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden,
-[hidden] {
-	display: none !important;
-}
-
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-
-.visually-hidden {
-	border: 0;
-	clip: rect(0, 0, 0, 0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	white-space: nowrap;
-	width: 1px;
-	/* 1 */
-}
-
-/*
- * Extends the .visually-hidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.visually-hidden.focusable:active,
-.visually-hidden.focusable:focus {
-	clip: auto;
-	height: auto;
-	margin: 0;
-	overflow: visible;
-	position: static;
-	white-space: inherit;
-	width: auto;
-}
-
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-	visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * The use of `table` rather than `block` is only necessary if using
- * `::before` to contain the top-margins of child elements.
- */
-
-.clearfix::before,
-.clearfix::after {
-	content: "";
-	display: table;
-}
-
-.clearfix::after {
-	clear: both;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-	/* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-(-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 1.25dppx),
-(min-resolution: 120dpi) {
-	/* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-
-	*,
-	*::before,
-	*::after {
-		background: #fff !important;
-		color: #000 !important;
-		/* Black prints faster */
-		box-shadow: none !important;
-		text-shadow: none !important;
-	}
-
-	a,
-	a:visited {
-		text-decoration: underline;
-	}
-
-	a[href]::after {
-		content: " (" attr(href) ")";
-	}
-
-	abbr[title]::after {
-		content: " (" attr(title) ")";
-	}
-
-	/*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-	a[href^="#"]::after,
-	a[href^="javascript:"]::after {
-		content: "";
-	}
-
-	pre {
-		white-space: pre-wrap !important;
-	}
-
-	pre,
-	blockquote {
-		border: 1px solid #999;
-		page-break-inside: avoid;
-	}
-
-	tr,
-	img {
-		page-break-inside: avoid;
-	}
-
-	p,
-	h2,
-	h3 {
-		orphans: 3;
-		widows: 3;
-	}
-
-	h2,
-	h3 {
-		page-break-after: avoid;
+	nav .footer__list {
+		display: block;
 	}
 }
 
@@ -1144,7 +760,7 @@ h2 {
 	}
 
 	.footer {
-		& ul {
+		& .footer__list {
 			list-style-type: disc;
 			padding-left: 1em;
 			padding-bottom: 8rem;
@@ -1156,7 +772,7 @@ h2 {
 			display: block;
 		}
 
-		& ul {
+		& .header__list {
 			list-style-type: none;
 			position: fixed;
 			bottom: 0;
@@ -1164,34 +780,34 @@ h2 {
 			padding: 2rem;
 			width: 100%;
 
-			& li {
+			& .header__list-item {
 				flex: 1;
-				font-size: .9rem;
+				font-size: 0.9rem;
 				text-align: center;
-				padding-top: .8rem;
+				padding-top: 0.8rem;
 				position: relative;
 			}
 
 			/* 奇数番目のliに#006c90のボーダーを適用 */
-			& li:nth-of-type(odd)::before {
+			& .header__list-item:nth-of-type(odd)::before {
 				content: "";
 				position: absolute;
 				top: 0;
 				left: 0;
 				width: 100%;
-				border-top: 5px solid #78aeb4;
+				border-top: 6px solid #78aeb4;
 				/* 奇数番目の色 */
 				display: block;
 			}
 
 			/* 偶数番目のliに#f0f0d8のボーダーを適用 */
-			& li:nth-of-type(even)::before {
+			& .header__list-item:nth-of-type(even)::before {
 				content: "";
 				position: absolute;
 				top: 0;
 				left: 0;
 				width: 100%;
-				border-top: 5px solid #f0f0d8;
+				border-top: 8px solid #f0f0d8;
 				/* 偶数番目の色 */
 				display: block;
 			}
@@ -1214,5 +830,17 @@ h2 {
 
 	.w-100-s {
 		width: 100%;
+	}
+
+	.back-to-top {
+		bottom: 100px;
+	}
+
+	section::after {
+		background-image: url("../img/genome-sp.svg");
+	}
+
+	.align-start-s {
+		align-items: flex-start;
 	}
 }

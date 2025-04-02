@@ -55,11 +55,11 @@
 
   <body>
     <header id="header" class="header">
-      <div class="header__bg">
+      <div class="pt-3 header__bg">
         <img
           src="img/genome-sp.svg"
           alt="ゲノム配列の装飾画像"
-          class="img-fluid"
+          class="img-fluid visible-s hidden"
         />
       </div>
       <div class="container">
@@ -188,12 +188,22 @@
           <div class="flex justify-center align-start flex-column-s">
             <div class="flex-1">
               <h2 id="flow" class="mt-0 mb-10 anchor-offset">検査の流れ</h2>
+              <img
+                src="img/examination_image_sp.svg"
+                alt="検査の流れステップ1-5"
+                class="img-fluid visible-s hidden"
+              />
               <div class="flex flex-column-s gap-5">
                 <div>
                   <img
                     src="img/examination_image02.svg"
-                    alt="検査の流れステップ1"
-                    class="img-fluid"
+                    alt="検査の流れステップ2"
+                    class="w-70 hidden-s visible mb-5"
+                  />
+                  <img
+                    src="img/examination_image04.svg"
+                    alt="検査の流れステップ4"
+                    class="w-70 hidden-s visible"
                   />
                 </div>
               </div>
@@ -201,9 +211,19 @@
             <div class="flex-1">
               <div>
                 <img
+                  src="img/examination_image01.svg"
+                  alt="検査の流れステップ1"
+                  class="w-70 hidden-s visible mb-5"
+                />
+                <img
                   src="img/examination_image03.svg"
-                  alt="検査の流れステップ2"
-                  class="img-fluid"
+                  alt="検査の流れステップ3"
+                  class="w-70 hidden-s visible mb-5"
+                />
+                <img
+                  src="img/examination_image05.svg"
+                  alt="検査の流れステップ5"
+                  class="w-70 hidden-s visible"
                 />
               </div>
             </div>
@@ -261,7 +281,7 @@
           </div>
           <div class="flex-1 footer-logo">
             <div>
-              <a href="" aria-label="Footer Logo">
+              <a href="/" aria-label="Footer Logo">
                 <img
                   src="img/logo.svg"
                   alt="がんゲノム医療室"

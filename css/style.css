@@ -143,11 +143,6 @@ h2 {
 	padding: 8px 0;
 }
 
-.container {
-	width: min(max(23.4375rem, 10vw), 80rem);
-	margin: 0 auto;
-}
-
 .qa-inner {
 	padding: clamp(3.75rem, 2.196rem + 6.63vw, 7.5rem) 4rem;
 	font-size: clamp(1rem, 0.767rem + 0.99vw, 1.563rem);
@@ -712,19 +707,156 @@ h2 {
 	display: block;
 }
 
+nav .footer__list {
+	display: block;
+}
+
+/* ========================
+   Container Base Style
+======================== */
+.container {
+	width: min(max(23.4375rem, 10vw), 80rem);
+	margin: 0 auto;
+}
+
+/* ========================
+   Responsive: PC (min-width: 1280px)
+======================== */
 @media only screen and (min-width: 80rem) {
 	.container {
 		width: 80rem;
 	}
+}
 
-	nav .footer__list {
+/* ========================
+   Responsive: Tablet (max-width: 820px)
+======================== */
+@media only screen and (max-width: 820px) {
+	.container {
+		width: 80%;
+		padding: 0 2rem;
+	}
+
+	.flex-1 {
+		width: 100%;
+	}
+
+	.br-sp {
+		display: inline;
+	}
+
+	.flex-column-s {
+		flex-direction: column !important;
+	}
+
+	.header-logo {
+		padding-left: 4rem;
+		padding-right: 4rem;
+	}
+
+	.footer {
+		& .footer__list {
+			list-style-type: disc;
+			padding-left: 1em;
+			padding-bottom: 8rem;
+		}
+	}
+
+	.header {
+		& nav {
+			display: block;
+		}
+
+		& .header__list {
+			list-style-type: none;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			z-index: 99;
+			padding: 2rem;
+			width: 100%;
+
+			& .header__list-item {
+				flex: 1;
+				font-size: 0.9rem;
+				text-align: center;
+				padding-top: 0.8rem;
+				position: relative;
+			}
+
+			& .header__list-item:nth-of-type(odd)::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				border-top: 6px solid #78aeb4;
+
+				display: block;
+			}
+
+			& .header__list-item:nth-of-type(even)::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				border-top: 8px solid #f0f0d8;
+				display: block;
+			}
+		}
+
+		& .dropdown-menu {
+			display: none;
+		}
+	}
+
+	.pb-10 {
+		padding-bottom: 0;
+	}
+
+	section {
+		& h2 {
+			text-align: center;
+		}
+	}
+
+	.w-100-s {
+		width: 100%;
+	}
+
+	.back-to-top {
+		bottom: 120px;
+	}
+
+	section::after {
+		background-image: url("../img/genome-sp.svg");
+	}
+
+	.align-center-s {
+		align-items: center;
+	}
+
+	.text-center-s {
+		text-align: center;
+	}
+
+	.hidden-s {
+		display: none;
+	}
+
+	.visible-s {
 		display: block;
 	}
 }
 
+/* ========================
+   Responsive: Smartphone (max-width: 480px)
+======================== */
 @media only screen and (max-width: 480px) {
 	.container {
 		width: 100%;
+		padding: 0;
 	}
 
 	.br-sp {

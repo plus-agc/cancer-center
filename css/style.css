@@ -27,7 +27,7 @@ ol {
 	background-color: #585048;
 
 	& .footer__list {
-		padding-left: 1em;
+		margin-left: 1.5em;
 	}
 }
 
@@ -711,6 +711,53 @@ nav .footer__list {
 	display: block;
 }
 
+/* ==========================================================================
+   テーブル
+   ========================================================================== */
+
+.table-scroll {
+	overflow-x: auto;
+	width: 100%;
+	font-size: 1rem;
+}
+
+.data-table {
+	border-collapse: separate;
+	border-spacing: 10px;
+	width: 100%;
+}
+
+.data-table th,
+.data-table td {
+	text-align: center;
+	padding: 1rem;
+	border-radius: 12px;
+	background-color: #F0F0D8;
+	color: #006C90;
+	font-weight: normal;
+	white-space: nowrap;
+}
+
+.data-table .main-title {
+	background-color: #78AEB4;
+	color: #8e3e90;
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+.data-table thead th:not(.main-title) {
+	background-color: #78AEB4;
+	color: #006C90;
+	font-weight: bold;
+}
+
+.data-table .row-label {
+	background-color: #78AEB4;
+	color: #006C90;
+	font-weight: bold;
+	text-align: left;
+}
+
 /* ========================
    Container Base Style
 ======================== */
@@ -757,7 +804,7 @@ nav .footer__list {
 	.footer {
 		& .footer__list {
 			list-style-type: disc;
-			padding-left: 1em;
+			margin-left: 1.5em;
 			padding-bottom: 8rem;
 		}
 	}
@@ -875,7 +922,7 @@ nav .footer__list {
 	.footer {
 		& .footer__list {
 			list-style-type: disc;
-			padding-left: 1em;
+			margin-left: 1.5em;
 			padding-bottom: 8rem;
 		}
 	}

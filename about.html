@@ -1,280 +1,230 @@
 <!DOCTYPE html>
 <html class="no-js" lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>がんゲノム医療室について</title>
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <meta name="description" content="" />
 
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:image:alt" content="" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>がんゲノム医療室について</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <meta name="description" content="" />
 
-    <link rel="icon" href="favicon.ico" sizes="any" />
-    <link rel="icon" href="icon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="icon.png" />
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:image:alt" content="" />
 
-    <link rel="manifest" href="site.webmanifest" />
-    <meta name="theme-color" content="#fafafa" />
-    <script>
-      (function (d) {
-        var config = {
-            kitId: "mbt0fpv",
-            scriptTimeout: 3000,
-            async: true,
-          },
-          h = d.documentElement,
-          t = setTimeout(function () {
-            h.className =
-              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
-          }, config.scriptTimeout),
-          tk = d.createElement("script"),
-          f = false,
-          s = d.getElementsByTagName("script")[0],
-          a;
-        h.className += " wf-loading";
-        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
-        tk.async = true;
-        tk.onload = tk.onreadystatechange = function () {
-          a = this.readyState;
-          if (f || (a && a != "complete" && a != "loaded")) return;
-          f = true;
-          clearTimeout(t);
-          try {
-            Typekit.load(config);
-          } catch (e) {}
-        };
-        s.parentNode.insertBefore(tk, s);
-      })(document);
-    </script>
-  </head>
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icon.png" />
 
-  <body>
-    <header id="header" class="header">
-      <div class="pt-3 header__bg">
-        <img
-          src="img/genome-sp.svg"
-          alt="ゲノム配列の装飾画像"
-          class="img-fluid visible-s hidden"
-        />
-      </div>
-      <div class="container">
-        <nav class="flex justify-between pt-4">
-          <div class="header-logo">
-            <a href="./" aria-label="Header Logo">
-              <img
-                src="img/logo.svg"
-                alt="がんゲノム医療室"
-                class="img-fluid"
-              />
-            </a>
-          </div>
-          <ul class="header__list flex list gap-3">
-            <li class="header__list-item dropdown">
-              <a href="about.html" class="dropdown-toggle"
-                >がんゲノム<br class="br-sp" />医療室<br
-                  class="br-sp"
-                />について</a
-              >
-              <ul class="dropdown-menu">
-                <li class="dropdown-menu__item">
-                  <a href="about.html#greeting">ごあいさつ</a>
-                </li>
-              </ul>
-            </li>
-            <li class="header__list-item dropdown">
-              <a href="examination.html" class="dropdown-toggle"
-                >がん遺伝子<br class="br-sp" />パネル検査<br
-                  class="br-sp"
-                />とは</a
-              >
-              <ul class="dropdown-menu">
-                <li class="dropdown-menu__item">
-                  <a href="examination.html#merit">メリット</a>
-                </li>
-                <li class="dropdown-menu__item">
-                  <a href="examination.html#type">検査の種類</a>
-                </li>
-                <li class="dropdown-menu__item">
-                  <a href="examination.html#flow">検査の流れ</a>
-                </li>
-                <li class="dropdown-menu__item">
-                  <a href="examination.html#insurance-coverage"
-                    >保険適用について</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="header__list-item">
-              <a href="qa.html">よくある<br class="br-sp" />質問</a>
-            </li>
-            <li class="header__list-item dropdown">
-              <a href="notice.html" class="dropdown-toggle"
-                >医療機関の<br class="br-sp" />みなさまへ</a
-              >
-              <ul class="dropdown-menu">
-                <li class="dropdown-menu__item">
-                  <a href="notice.html#externally-diagnosed">外来受診の手順</a>
-                </li>
-                <li class="dropdown-menu__item">
-                  <a href="notice.html#information-sheet">診療情報提供書</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main id="main" class="main">
-      <section>
-        <div class="container">
-          <div
-            class="flex justify-center align-start align-center-s flex-column-s"
-          >
-            <div class="flex-1 self-center">
-              <img
-                src="img/about.svg"
-                alt="がんゲノム医療室の紹介画像"
-                class="w-100-s"
-              />
-            </div>
-            <div class="flex-1">
-              <p>
-                「ゲノム（genome）」とは"gene（遺伝子）"と集合をあらわす"-ome"を組み合わせた言葉で、生物のもつ遺伝子（遺伝情報）の全体を指します。
-              </p>
-            </div>
-          </div>
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="theme-color" content="#fafafa" />
+  <script>
+    (function (d) {
+      var config = {
+        kitId: "mbt0fpv",
+        scriptTimeout: 3000,
+        async: true,
+      },
+        h = d.documentElement,
+        t = setTimeout(function () {
+          h.className =
+            h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+        }, config.scriptTimeout),
+        tk = d.createElement("script"),
+        f = false,
+        s = d.getElementsByTagName("script")[0],
+        a;
+      h.className += " wf-loading";
+      tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+      tk.async = true;
+      tk.onload = tk.onreadystatechange = function () {
+        a = this.readyState;
+        if (f || (a && a != "complete" && a != "loaded")) return;
+        f = true;
+        clearTimeout(t);
+        try {
+          Typekit.load(config);
+        } catch (e) { }
+      };
+      s.parentNode.insertBefore(tk, s);
+    })(document);
+  </script>
+</head>
+
+<body>
+  <header id="header" class="header">
+    <div class="pt-3 header__bg">
+      <img src="img/genome-sp.svg" alt="ゲノム配列の装飾画像" class="img-fluid visible-s hidden" />
+    </div>
+    <div class="container">
+      <nav class="flex justify-between pt-4">
+        <div class="header-logo">
+          <a href="./" aria-label="Header Logo">
+            <img src="img/logo.svg" alt="がんゲノム医療室" class="img-fluid" />
+          </a>
         </div>
-      </section>
-      <section>
-        <div class="container">
-          <div
-            class="flex justify-center align-start align-center-s flex-column-s"
-          >
-            <div class="flex-1">
-              <h2 class="mt-0">
-                がんゲノム<br />
-                医療室について
-              </h2>
-            </div>
-            <div class="flex-1">
-              <p>
-                弘前大学医学部附属病院は2019年9月に厚生労働省から「がんゲノム医療拠点病院」の指定を受け、同年10月に腫瘍センター内に「がんゲノム医療室」を開設しました。
-                各領域の医師、薬剤師、看護師等多職種で構成される組織で、「エキスパートパネル」を毎週開催しております。
-              </p>
-              <a href="#" id="expertButton" class="button"
-                >エキスパートパネルとは？</a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div class="container">
-          <div
-            class="flex justify-center align-start align-center-s flex-column-s"
-          >
-            <div class="flex-1">
-              <h2 id="greeting" class="mt-0 anchor-offset">ごあいさつ</h2>
-              <div class="flex flex-column-s gap-5">
-                <div class="flex justify-center">
-                  <img
-                    src="img/sato.jpg"
-                    alt="佐藤温教授画像"
-                    class="img-circle"
-                    width="192"
-                    height="192"
-                  />
-                </div>
-                <div>
-                  <p class="profile">
-                    弘前大学医学部附属病院<br />腫瘍センター長<br />がんゲノム医療室長<br />
-                    腫瘍内科<br />腫瘍内科学講座 教授
-                  </p>
-                  <h3 class="m-0">佐藤 温</h3>
-                  <p class="profile m-0">Sato Atsushi</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <p class="summary">
-                　がん医療は日進月歩で大きく変化してきています。そして今、遺伝子情報に基づく個別化治療が始まり、がんゲノム医療として新たな時代を迎えています。がんの原因は遺伝子の変異にあります。
-              </p>
-              <div class="more-content">
-                <p>
-                  近年、コンパニオン診断やがん遺伝子パネル検査とよばれる遺伝子検査の技術進歩と、分子生物学の進歩から創薬された分子標的薬の開発とが結びついたことにより、これまでのような疾患ごとの治療方法の選択ではなく、患者個々人の遺伝子情報に基づいた、最も適切な治療方法を選択することが可能になりました。各種がん関連遺伝子に対する創薬開発はさらに進み、次々と新規薬剤が承認されてきています。連動して、医療現場もまた大きく変化しています。第３期がん対策推進基本計画のもと、全国でがんゲノム医療の体制づくりが急ピッチで進められています。当院はこれまで、がんゲノム中核拠点病院(全国11施設)の東北大学病院の連携病院として協力体制のもとで実働してきましたが、2019年9月に厚生労働省より新たに策定された「がんゲノム医療拠点病院」(全国34施設/東北地方2施設)に指定されました。これからは、自施設で遺伝子パネル検査を完結できる医療機関となります。同年10月に腫瘍センター内に「がんゲノム医療室」を開設しました。そして、現在、がんに関わる基礎、臨床の各講座が集結して協力体制を構築し、各種専門家による協議である「エキスパートパネル」を毎週開催しております。
-                </p>
-                <p>
-                  　遺伝子パネル検査により得られた全国のゲノム医療の情報は、2018年に国立がん研究センター内に開設された、がんゲノム情報管理センター（C-CAT：Center）
-                </p>
-              </div>
-              <button class="toggle-button">続きを読む</button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <div class="back-to-top" id="backToTop">
-        <a href="#header" aria-label="トップに戻る"
-          ><img src="img/top.svg" alt="トップに戻る"
-        /></a>
-      </div>
-    </main>
-    <footer id="footer" class="footer p-4">
-      <div class="container">
-        <div
-          class="flex flex-wrap flex-column-s justify-between align-center gap-5"
-        >
-          <div class="flex-1 self-start">
-            <img
-              src="img/genome.svg"
-              alt="ゲノム配列の装飾画像"
-              class="img-fluid"
-            />
-          </div>
-          <div class="flex-1 footer-logo">
-            <div>
-              <a href="./" aria-label="Footer Logo">
-                <img
-                  src="img/logo.svg"
-                  alt="がんゲノム医療室"
-                  class="img-fluid"
-                />
-              </a>
-            </div>
-            <address class="mt-3">
-              <p class="m-0">〒036-8563</p>
-              <p class="m-0">青森県弘前市本町53番地</p>
-              <p class="m-0">
-                <a href="tel:0172-35-5111">TEL.0172-35-5111（代表）</a>
-              </p>
-              <p class="m-0">
-                <a href="fax:0172-39-5338">FAX.0172-39-5338</a>
-              </p>
-            </address>
-          </div>
-          <div class="flex-1 self-start">
-            <a href="tel:0172-39-5174" aria-label="Footer Contact">
-              <img
-                src="img/contact.svg"
-                alt="がん相談支援センター"
-                class="img-fluid"
-              />
-            </a>
-            <ul class="footer__list mt-3">
-              <li class="footer__list-item">
-                <a href="">プライバシーポリシー</a>
+        <ul class="header__list flex list gap-3">
+          <li class="header__list-item dropdown">
+            <a href="about.html" class="dropdown-toggle">がんゲノム<br class="br-sp" />医療室<br class="br-sp" />について</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-menu__item">
+                <a href="about.html#greeting">ごあいさつ</a>
               </li>
-              <li class="footer__list-item"><a href="">サイトポリシー</a></li>
-              <li class="footer__list-item"><a href="">サイトマップ</a></li>
             </ul>
+          </li>
+          <li class="header__list-item dropdown">
+            <a href="examination.html" class="dropdown-toggle">がん遺伝子<br class="br-sp" />パネル検査<br class="br-sp" />とは</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-menu__item">
+                <a href="examination.html#merit">メリット</a>
+              </li>
+              <li class="dropdown-menu__item">
+                <a href="examination.html#type">検査の種類</a>
+              </li>
+              <li class="dropdown-menu__item">
+                <a href="examination.html#flow">検査の流れ</a>
+              </li>
+              <li class="dropdown-menu__item">
+                <a href="examination.html#insurance-coverage">保険適用について</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__list-item">
+            <a href="qa.html">よくある<br class="br-sp" />質問</a>
+          </li>
+          <li class="header__list-item dropdown">
+            <a href="notice.html" class="dropdown-toggle">医療機関の<br class="br-sp" />みなさまへ</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-menu__item">
+                <a href="notice.html#externally-diagnosed">外来受診の手順</a>
+              </li>
+              <li class="dropdown-menu__item">
+                <a href="notice.html#information-sheet">診療情報提供書</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="main">
+    <section>
+      <div class="container">
+        <div class="flex justify-center align-start align-center-s flex-column-s">
+          <div class="flex-1 self-center">
+            <img src="img/about.svg" alt="がんゲノム医療室の紹介画像" class="w-100-s" />
+          </div>
+          <div class="flex-1">
+            <p>
+              「ゲノム（genome）」とは"gene（遺伝子）"と集合をあらわす"-ome"を組み合わせた言葉で、生物のもつ遺伝子（遺伝情報）の全体を指します。
+            </p>
           </div>
         </div>
       </div>
-    </footer>
-    <script src="js/app.js" defer></script>
-  </body>
+    </section>
+    <section>
+      <div class="container">
+        <div class="flex justify-center align-start align-center-s flex-column-s">
+          <div class="flex-1">
+            <h2 class="mt-0">
+              がんゲノム<br />
+              医療室について
+            </h2>
+          </div>
+          <div class="flex-1">
+            <p>
+              弘前大学医学部附属病院は2019年9月に厚生労働省から「がんゲノム医療拠点病院」の指定を受け、同年10月に腫瘍センター内に「がんゲノム医療室」を開設しました。
+              各領域の医師、薬剤師、看護師等多職種で構成される組織で、「エキスパートパネル」を毎週開催しております。
+            </p>
+            <a href="#" id="expertButton" class="button">エキスパートパネルとは？</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="flex justify-center align-start align-center-s flex-column-s">
+          <div class="flex-1">
+            <h2 id="greeting" class="mt-0 anchor-offset">ごあいさつ</h2>
+            <div class="flex flex-column-s gap-5">
+              <div class="flex justify-center">
+                <img src="img/sato.jpg" alt="佐藤温教授画像" class="img-circle" width="192" height="192" />
+              </div>
+              <div>
+                <p class="profile">
+                  弘前大学医学部附属病院<br />腫瘍センター長<br />がんゲノム医療室長<br />
+                  腫瘍内科<br />腫瘍内科学講座 教授
+                </p>
+                <h3 class="m-0">佐藤 温</h3>
+                <p class="profile m-0">Sato Atsushi</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex-1">
+            <p class="summary">
+              がん医療は日進月歩で大きく変化してきています。そして今、遺伝子情報に基づく個別化治療が始まり、がんゲノム医療として新たな時代を迎えています。がんの原因は遺伝子の変異にあります。
+            </p>
+            <div class="more-content">
+              <p>
+                近年、コンパニオン診断やがん遺伝子パネル検査とよばれる遺伝子検査の技術進歩と、分子生物学の進歩から創薬された分子標的薬の開発とが結びついたことにより、これまでのような疾患ごとの治療方法の選択ではなく、患者個々人の遺伝子情報に基づいた、最も適切な治療方法を選択することが可能になりました。各種がん関連遺伝子に対する創薬開発はさらに進み、次々と新規薬剤が承認されてきています。連動して、医療現場もまた大きく変化しています。第３期がん対策推進基本計画のもと、全国でがんゲノム医療の体制づくりが急ピッチで進められています。当院はこれまで、がんゲノム中核拠点病院(全国11施設)の東北大学病院の連携病院として協力体制のもとで実働してきましたが、2019年9月に厚生労働省より新たに策定された「がんゲノム医療拠点病院」(全国34施設/東北地方2施設)に指定されました。これからは、自施設で遺伝子パネル検査を完結できる医療機関となります。同年10月に腫瘍センター内に「がんゲノム医療室」を開設しました。そして、現在、がんに関わる基礎、臨床の各講座が集結して協力体制を構築し、各種専門家による協議である「エキスパートパネル」を毎週開催しております。<br>
+                遺伝子パネル検査により得られた全国のゲノム医療の情報は、2018年に国立がん研究センター内に開設された、がんゲノム情報管理センター（C-CAT：Center for Cancer Genomics and
+                Advanced
+                Therapeutics）に集約・保管され、新たな医療の創出のために適切に利活用されていきます。つまり、がんゲノム医療の推進は、ビッグデータを活用する国家プロジェクトでもあります。そのプロジェクトに当院が、がんゲノム医療拠点病院として参画できることは大きな意味があります。<br>
+                けれども、問題もあります。標準治療のない状況の中で、遺伝子パネル検査で、未承認薬を含めた最適な治療薬に結び付くことが患者さんの希望です。しかし、治療薬までたどり着けるのは10人中、1-2人程度です。治療薬候補が明らかになっても治療を受ける場が限られてしまうこともあります。また、遺伝子解析時の偶然の遺伝性疾患発見に対しては遺伝カウンセリングも必要になります。これらの問題を乗り越えた先に望まれる未来があります。
+                私たちは、次世代医療へのスタートラインにつくことができました。これからが大事です。地域全体の患者さんに成果を還元できるよう、私たちみんなで一歩ずつ歩んでいきたいと思います。
+              </p>
+              <p>
+                　遺伝子パネル検査により得られた全国のゲノム医療の情報は、2018年に国立がん研究センター内に開設された、がんゲノム情報管理センター（C-CAT：Center）
+              </p>
+            </div>
+            <button class="toggle-button">続きを読む</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="back-to-top" id="backToTop">
+      <a href="#header" aria-label="トップに戻る"><img src="img/top.svg" alt="トップに戻る" /></a>
+    </div>
+  </main>
+  <footer id="footer" class="footer p-4">
+    <div class="container">
+      <div class="flex flex-wrap flex-column-s justify-between align-center gap-5">
+        <div class="flex-1 self-start">
+          <img src="img/genome.svg" alt="ゲノム配列の装飾画像" class="img-fluid" />
+        </div>
+        <div class="flex-1 footer-logo">
+          <div>
+            <a href="./" aria-label="Footer Logo">
+              <img src="img/logo.svg" alt="がんゲノム医療室" class="img-fluid" />
+            </a>
+          </div>
+          <address class="mt-3">
+            <p class="m-0">〒036-8563</p>
+            <p class="m-0">青森県弘前市本町53番地</p>
+            <p class="m-0">
+              <a href="tel:0172-39-5010">TEL.0172-39-5010（代表）</a>
+            </p>
+            <p class="m-0">
+              <a href="fax:0172-39-5003">FAX.0172-39-5003</a>
+            </p>
+          </address>
+        </div>
+        <div class="flex-1 self-start">
+          <ul class="footer__list p-0">
+            <li class="footer__list-item">
+              <a href="">プライバシーポリシー</a>
+            </li>
+            <li class="footer__list-item"><a href="">サイトポリシー</a></li>
+            <li class="footer__list-item"><a href="">サイトマップ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/app.js" defer></script>
+</body>
+
 </html>

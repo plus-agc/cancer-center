@@ -1,21 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
+	// ドロップダウンメニューの動作を設定
 	const dropdowns = document.querySelectorAll(".dropdown");
 
 	for (const dropdown of dropdowns) {
 		const dropdownMenu = dropdown.querySelector(".dropdown-menu");
 		const dropdownToggle = dropdown.querySelector(".dropdown-toggle");
 
+		// マウスが乗ったときにドロップダウンメニューを表示
 		dropdown.addEventListener("mouseenter", () => {
 			dropdownMenu.classList.add("dropdown-menu--active");
 		});
 
+		// マウスが離れたときにドロップダウンメニューを非表示
 		dropdown.addEventListener("mouseleave", () => {
 			dropdownMenu.classList.remove("dropdown-menu--active");
 		});
 
-		dropdownToggle.addEventListener("click", (event) => {});
+		// ドロップダウントグルがクリックされたときの動作（現在は空）
+		dropdownToggle.addEventListener("click", (event) => { });
 	}
 
+	// タッチデバイスでのドロップダウンメニューの動作を設定
 	if (
 		"ontouchstart" in window &&
 		window.matchMedia("(min-width: 768px)").matches
@@ -25,11 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
 			const dropdownToggle = dropdown.querySelector(".dropdown-toggle");
 			let isMenuOpen = false;
 
+			// タッチイベントでドロップダウンメニューを開閉
 			dropdown.addEventListener("touchstart", (event) => {
 				if (!isMenuOpen && event.target === dropdownToggle) {
 					event.preventDefault();
 					isMenuOpen = true;
 
+					// 他のドロップダウンメニューを閉じる
 					for (const otherDropdown of dropdowns) {
 						if (otherDropdown !== dropdown) {
 							otherDropdown
@@ -38,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 						}
 					}
 
+					// 現在のドロップダウンメニューを開く
 					dropdownMenu.classList.add("dropdown-menu--active");
 				} else if (isMenuOpen && event.target === dropdownToggle) {
 					isMenuOpen = false;
@@ -45,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			});
 		}
 
+		// タッチイベントでドロップダウンメニュー外をクリックした場合に閉じる
 		document.addEventListener("touchstart", (event) => {
 			let clickedInsideDropdown = false;
 
@@ -64,6 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 
+	// ヘッダーの高さを取得してCSS変数に設定
 	const setHeaderHeight = () => {
 		const header = document.querySelector(".header");
 		if (header) {
@@ -75,10 +85,12 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	};
 
+	// ページ読み込み時とリサイズ時にヘッダーの高さを設定
 	setHeaderHeight();
 	window.addEventListener("resize", setHeaderHeight);
 	window.addEventListener("load", setHeaderHeight);
 
+	// 「続きを表示」ボタンの動作を設定
 	const toggleButton = document.querySelector(".toggle-button");
 	if (toggleButton) {
 		toggleButton.addEventListener("click", () => {
@@ -96,6 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 
+	// 「トップに戻る」ボタンの表示/非表示を設定
 	const backToTop = document.getElementById("backToTop");
 	if (backToTop) {
 		window.addEventListener("scroll", () => {
@@ -107,6 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 
+	// 画像の遅延読み込みと幅・高さの設定
 	for (const img of document.querySelectorAll("img")) {
 		img.setAttribute("loading", "lazy");
 
@@ -124,6 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	}
 
+	// アンカーリンクのスムーズスクロールを設定
 	for (const anchor of document.querySelectorAll('a[href^="#"]')) {
 		anchor.addEventListener("click", (e) => {
 			const targetId = anchor.getAttribute("href");
@@ -145,6 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 
+	// 「エキスパートパネルとは？」ボタンの動作を設定
 	const expertButton = document.getElementById("expertButton");
 
 	if (expertButton) {

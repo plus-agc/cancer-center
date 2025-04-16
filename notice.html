@@ -1,250 +1,191 @@
 <!DOCTYPE html>
 <html class="no-js" lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>よくあるご質問</title>
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <meta name="description" content="" />
 
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:image:alt" content="" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>よくあるご質問</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <meta name="description" content="" />
 
-    <link rel="icon" href="favicon.ico" sizes="any" />
-    <link rel="icon" href="icon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="icon.png" />
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:image:alt" content="" />
 
-    <link rel="manifest" href="site.webmanifest" />
-    <meta name="theme-color" content="#fafafa" />
-    <script>
-      (function (d) {
-        var config = {
-            kitId: "mbt0fpv",
-            scriptTimeout: 3000,
-            async: true,
-          },
-          h = d.documentElement,
-          t = setTimeout(function () {
-            h.className =
-              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
-          }, config.scriptTimeout),
-          tk = d.createElement("script"),
-          f = false,
-          s = d.getElementsByTagName("script")[0],
-          a;
-        h.className += " wf-loading";
-        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
-        tk.async = true;
-        tk.onload = tk.onreadystatechange = function () {
-          a = this.readyState;
-          if (f || (a && a != "complete" && a != "loaded")) return;
-          f = true;
-          clearTimeout(t);
-          try {
-            Typekit.load(config);
-          } catch (e) {}
-        };
-        s.parentNode.insertBefore(tk, s);
-      })(document);
-    </script>
-  </head>
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icon.png" />
 
-  <body>
-    <header id="header" class="header">
-      <div class="pt-3 header__bg">
-        <img
-          src="img/genome-sp.svg"
-          alt="ゲノム配列の装飾画像"
-          class="img-fluid visible-s hidden"
-        />
-      </div>
-      <div class="container">
-        <nav class="flex justify-between pt-4">
-          <div class="header-logo">
-            <a href="./" aria-label="Header Logo">
-              <img
-                src="img/logo.svg"
-                alt="がんゲノム医療室"
-                class="img-fluid"
-              />
-            </a>
-          </div>
-          <ul class="header__list flex list gap-3">
-            <li class="header__list-item dropdown">
-              <a href="about.html" class="dropdown-toggle"
-                >がんゲノム<br class="br-sp" />医療室<br
-                  class="br-sp"
-                />について</a
-              >
-              <ul class="dropdown-menu">
-                <li class="dropdown-menu__item">
-                  <a href="about.html#greeting">ごあいさつ</a>
-                </li>
-              </ul>
-            </li>
-            <li class="header__list-item dropdown">
-              <a href="examination.html" class="dropdown-toggle"
-                >がん遺伝子<br class="br-sp" />パネル検査<br
-                  class="br-sp"
-                />とは</a
-              >
-              <ul class="dropdown-menu">
-                <li class="dropdown-menu__item">
-                  <a href="examination.html#merit">メリット</a>
-                </li>
-                <li class="dropdown-menu__item">
-                  <a href="examination.html#type">検査の種類</a>
-                </li>
-                <li class="dropdown-menu__item">
-                  <a href="examination.html#flow">検査の流れ</a>
-                </li>
-                <li class="dropdown-menu__item">
-                  <a href="examination.html#insurance-coverage"
-                    >保険適用について</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="header__list-item">
-              <a href="qa.html">よくある<br class="br-sp" />質問</a>
-            </li>
-            <li class="header__list-item dropdown">
-              <a href="notice.html" class="dropdown-toggle"
-                >医療機関の<br class="br-sp" />みなさまへ</a
-              >
-              <ul class="dropdown-menu">
-                <li class="dropdown-menu__item">
-                  <a href="notice.html#externally-diagnosed">外来受診の手順</a>
-                </li>
-                <li class="dropdown-menu__item">
-                  <a href="notice.html#information-sheet">診療情報提供書</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main id="main" class="main">
-      <section>
-        <div class="container">
-          <div
-            class="flex justify-center align-start align-center-s flex-column-s"
-          >
-            <div class="flex-1">
-              <h2 class="mt-0">
-                医療機関の<br />
-                みなさまへ
-              </h2>
-            </div>
-            <div class="flex-1">
-              <p>
-                がんゲノム外来へ患者さんをご紹介いただく場合には、「がんゲノム外来受診のための必要書類・検体についてのご案内文書」と「がんゲノム外来・診療情報提供書」をダウンロードし、ご確認・ご記入いただき、必要書類・検体のご準備をお願いいたします。申し込みについては直接PDFをご確認ください。<br />
-                ※がんゲノム外来（腫瘍内科）以外の診療科でもがん遺伝子パネル検査を実施している診療科がございます。それぞれの診療科へご確認ください。
-                保険診療にてがん遺伝子パネル検査を実施する患者の臨床情報について、患者様の同意が得られた場合には当院より、厚生労働省が設置したがんゲノム情報管理センター（Center
-                for Cancer Genomics and Advanced Therapeutics:
-                C-CAT）に登録する仕組みとなっております。
-              </p>
-              <p>
-                検査実施後も継続して臨床情報を登録する必要がありますので、当院から情報提供の依頼をさせていただく場合があります。
-                検査実施後も臨床情報の提供にご協力をお願いします。
-              </p>
-              <p id="externally-diagnosed" class="notice-link mb-3">
-                外来受診の手順<a
-                  href="file/consultation_process.pdf"
-                  class="ml-3"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><img
-                    src="img/icon-pdf.svg"
-                    alt="外来受診の手順PDFファイルのアイコン"
-                /></a>
-              </p>
-              <p id="information-sheet" class="notice-link">
-                診療情報提供書<a
-                  href="file/medical_information_sheet.pdf"
-                  class="ml-3"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><img
-                    src="img/icon-pdf.svg"
-                    alt="診療情報提供書PDFファイルのアイコン" /></a
-                ><a
-                  href="file/medical_information_sheet.docx"
-                  class="ml-3"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><img
-                    src="img/icon-word.svg"
-                    alt="診療情報提供書Wordファイルのアイコン"
-                /></a>
-              </p>
-            </div>
-          </div>
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="theme-color" content="#fafafa" />
+  <script>
+    (function (d) {
+      var config = {
+        kitId: "mbt0fpv",
+        scriptTimeout: 3000,
+        async: true,
+      },
+        h = d.documentElement,
+        t = setTimeout(function () {
+          h.className =
+            h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+        }, config.scriptTimeout),
+        tk = d.createElement("script"),
+        f = false,
+        s = d.getElementsByTagName("script")[0],
+        a;
+      h.className += " wf-loading";
+      tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+      tk.async = true;
+      tk.onload = tk.onreadystatechange = function () {
+        a = this.readyState;
+        if (f || (a && a != "complete" && a != "loaded")) return;
+        f = true;
+        clearTimeout(t);
+        try {
+          Typekit.load(config);
+        } catch (e) { }
+      };
+      s.parentNode.insertBefore(tk, s);
+    })(document);
+  </script>
+</head>
+
+<body>
+  <header id="header" class="header">
+    <div class="pt-3 header__bg">
+      <img src="img/genome-sp.svg" alt="ゲノム配列の装飾画像" class="img-fluid visible-s hidden" />
+    </div>
+    <div class="container">
+      <nav class="flex justify-between pt-4">
+        <div class="header-logo">
+          <a href="./" aria-label="Header Logo">
+            <img src="img/logo.svg" alt="がんゲノム医療室" class="img-fluid" />
+          </a>
         </div>
-      </section>
-      <div class="back-to-top" id="backToTop">
-        <a href="#header" aria-label="トップに戻る"
-          ><img src="img/top.svg" alt="トップに戻る"
-        /></a>
-      </div>
-    </main>
-    <footer id="footer" class="footer p-4">
-      <div class="container">
-        <div
-          class="flex flex-wrap flex-column-s justify-between align-center gap-5"
-        >
-          <div class="flex-1 self-start">
-            <img
-              src="img/genome.svg"
-              alt="ゲノム配列の装飾画像"
-              class="img-fluid"
-            />
-          </div>
-          <div class="flex-1 footer-logo">
-            <div>
-              <a href="./" aria-label="Footer Logo">
-                <img
-                  src="img/logo.svg"
-                  alt="がんゲノム医療室"
-                  class="img-fluid"
-                />
-              </a>
-            </div>
-            <address class="mt-3">
-              <p class="m-0">〒036-8563</p>
-              <p class="m-0">青森県弘前市本町53番地</p>
-              <p class="m-0">
-                <a href="tel:0172-35-5111">TEL.0172-35-5111（代表）</a>
-              </p>
-              <p class="m-0">
-                <a href="fax:0172-39-5338">FAX.0172-39-5338</a>
-              </p>
-            </address>
-          </div>
-          <div class="flex-1 self-start">
-            <a href="tel:0172-39-5174" aria-label="Footer Contact">
-              <img
-                src="img/contact.svg"
-                alt="がん相談支援センター"
-                class="img-fluid"
-              />
-            </a>
-            <ul class="footer__list mt-3">
-              <li class="footer__list-item">
-                <a href="">プライバシーポリシー</a>
+        <ul class="header__list flex list gap-3">
+          <li class="header__list-item dropdown">
+            <a href="about.html" class="dropdown-toggle">がんゲノム<br class="br-sp" />医療室<br class="br-sp" />について</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-menu__item">
+                <a href="about.html#greeting">ごあいさつ</a>
               </li>
-              <li class="footer__list-item"><a href="">サイトポリシー</a></li>
-              <li class="footer__list-item"><a href="">サイトマップ</a></li>
             </ul>
+          </li>
+          <li class="header__list-item dropdown">
+            <a href="examination.html" class="dropdown-toggle">がん遺伝子<br class="br-sp" />パネル検査<br class="br-sp" />とは</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-menu__item">
+                <a href="examination.html#merit">メリット</a>
+              </li>
+              <li class="dropdown-menu__item">
+                <a href="examination.html#type">検査の種類</a>
+              </li>
+              <li class="dropdown-menu__item">
+                <a href="examination.html#flow">検査の流れ</a>
+              </li>
+              <li class="dropdown-menu__item">
+                <a href="examination.html#insurance-coverage">保険適用について</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__list-item">
+            <a href="qa.html">よくある<br class="br-sp" />質問</a>
+          </li>
+          <li class="header__list-item dropdown">
+            <a href="notice.html" class="dropdown-toggle">医療機関の<br class="br-sp" />みなさまへ</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-menu__item">
+                <a href="notice.html#externally-diagnosed">外来受診の手順</a>
+              </li>
+              <li class="dropdown-menu__item">
+                <a href="notice.html#information-sheet">診療情報提供書</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="main">
+    <section>
+      <div class="container">
+        <div class="flex justify-center align-start align-center-s flex-column-s">
+          <div class="flex-1">
+            <h2 class="mt-0">
+              医療機関の<br />
+              みなさまへ
+            </h2>
+          </div>
+          <div class="flex-1">
+            <p>
+              がんゲノム外来へ患者さんをご紹介いただく場合には、「がんゲノム外来受診のための必要書類・検体についてのご案内文書」と「がんゲノム外来・診療情報提供書」をダウンロードし、ご確認・ご記入いただき、必要書類・検体のご準備をお願いいたします。申し込みについては直接PDFをご確認ください。<br />
+              ※がんゲノム外来（腫瘍内科）以外の診療科でもがん遺伝子パネル検査を実施している診療科がございます。それぞれの診療科へご確認ください。
+              保険診療にてがん遺伝子パネル検査を実施する患者の臨床情報について、患者様の同意が得られた場合には当院より、厚生労働省が設置したがんゲノム情報管理センター（Center
+              for Cancer Genomics and Advanced Therapeutics:
+              C-CAT）に登録する仕組みとなっております。
+            </p>
+            <p>
+              検査実施後も継続して臨床情報を登録する必要がありますので、当院から情報提供の依頼をさせていただく場合があります。
+              検査実施後も臨床情報の提供にご協力をお願いします。
+            </p>
+            <p id="externally-diagnosed" class="notice-link mb-3">
+              外来受診の手順<a href="file/consultation_process.pdf" class="ml-3" target="_blank" rel="noopener noreferrer"><img
+                  src="img/icon-pdf.svg" alt="外来受診の手順PDFファイルのアイコン" /></a>
+            </p>
+            <p id="information-sheet" class="notice-link">
+              診療情報提供書<a href="file/medical_information_sheet.pdf" class="ml-3" target="_blank"
+                rel="noopener noreferrer"><img src="img/icon-pdf.svg" alt="診療情報提供書PDFファイルのアイコン" /></a><a
+                href="file/medical_information_sheet.docx" class="ml-3" target="_blank" rel="noopener noreferrer"><img
+                  src="img/icon-word.svg" alt="診療情報提供書Wordファイルのアイコン" /></a>
+            </p>
           </div>
         </div>
       </div>
-    </footer>
-    <script src="js/app.js" defer></script>
-  </body>
+    </section>
+    <div class="back-to-top" id="backToTop">
+      <a href="#header" aria-label="トップに戻る"><img src="img/top.svg" alt="トップに戻る" /></a>
+    </div>
+  </main>
+  <footer id="footer" class="footer p-4">
+    <div class="container">
+      <div class="flex flex-wrap flex-column-s justify-between align-center gap-5">
+        <div class="flex-1 self-start">
+          <img src="img/genome.svg" alt="ゲノム配列の装飾画像" class="img-fluid" />
+        </div>
+        <div class="flex-1 footer-logo">
+          <div>
+            <a href="./" aria-label="Footer Logo">
+              <img src="img/logo.svg" alt="がんゲノム医療室" class="img-fluid" />
+            </a>
+          </div>
+          <address class="mt-3">
+            <p class="m-0">〒036-8563</p>
+            <p class="m-0">青森県弘前市本町53番地</p>
+            <p class="m-0">
+              <a href="tel:0172-39-5010">TEL.0172-39-5010（代表）</a>
+            </p>
+            <p class="m-0">
+              <a href="fax:0172-39-5003">FAX.0172-39-5003</a>
+            </p>
+          </address>
+        </div>
+        <div class="flex-1 self-start">
+          <ul class="footer__list p-0">
+            <li class="footer__list-item">
+              <a href="">プライバシーポリシー</a>
+            </li>
+            <li class="footer__list-item"><a href="">サイトポリシー</a></li>
+            <li class="footer__list-item"><a href="">サイトマップ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/app.js" defer></script>
+</body>
+
 </html>

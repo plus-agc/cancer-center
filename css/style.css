@@ -111,6 +111,10 @@ h2 {
 	font-weight: 600;
 }
 
+h3 {
+	font-weight: 400;
+}
+
 .profile {
 	font-size: clamp(0.625rem, 0.496rem + 0.55vw, 0.938rem);
 	text-align: center;
@@ -154,14 +158,12 @@ h2 {
 	color: #006c90;
 	padding: 20px;
 	border-radius: 16px;
-	font-weight: bold;
 }
 
 .notice-link {
 	background-color: #f0f0d8;
 	padding: 20px;
 	color: #006c90;
-	font-weight: bold;
 	border-radius: 16px;
 	display: block;
 
@@ -742,20 +744,20 @@ nav .footer__list {
 .data-table .main-title {
 	background-color: #78AEB4;
 	color: #8e3e90;
-	font-weight: bold;
+	font-weight: normal;
 	font-size: 1.2rem;
 }
 
 .data-table thead th:not(.main-title) {
 	background-color: #78AEB4;
 	color: #006C90;
-	font-weight: bold;
+	font-weight: normal;
 }
 
 .data-table .row-label {
 	background-color: #78AEB4;
 	color: #006C90;
-	font-weight: bold;
+	font-weight: normal;
 	text-align: left;
 }
 

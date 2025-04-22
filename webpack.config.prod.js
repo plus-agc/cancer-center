@@ -1,3 +1,5 @@
+const fs = require("fs");
+const path = require("path");
 const { merge } = require("webpack-merge");
 const common = require("./webpack.common.js");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -35,9 +37,13 @@ module.exports = merge(common, {
 		],
 	},
 	plugins: [
-		new HtmlWebpackPlugin({
-			template: "./index.html",
-		}),
+		// 自動的に全HTMLファイルを読み込む
+		...fs.readdirSync(__dirname)
+			.filter((file) => path.extname(file) === ".html")
+			.map((file) => new HtmlWebpackPlugin({
+				template: `./${file}`,
+				filename: file,
+			})),
 		new CopyPlugin({
 			patterns: [
 				{ from: "img", to: "img" },
@@ -48,11 +54,6 @@ module.exports = merge(common, {
 				{ from: "favicon.ico", to: "favicon.ico" },
 				{ from: "robots.txt", to: "robots.txt" },
 				{ from: "icon.png", to: "icon.png" },
-				{ from: "404.html", to: "404.html" },
-				{ from: "about.html", to: "about.html" },
-				{ from: "notice.html", to: "notice.html" },
-				{ from: "qa.html", to: "qa.html" },
-				{ from: "examination.html", to: "examination.html" },
 				{ from: "site.webmanifest", to: "site.webmanifest" },
 			],
 		}),

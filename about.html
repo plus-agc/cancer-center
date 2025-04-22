@@ -249,6 +249,27 @@
       </div>
     </div>
   </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleButton = document.querySelector(".toggle-button");
+      const moreContent = document.querySelector(".more-content");
+
+      if (toggleButton && moreContent) {
+        // 初期状態を設定
+        moreContent.style.display = "none";
+
+        toggleButton.addEventListener("click", function () {
+          if (moreContent.style.display === "none") {
+            moreContent.style.display = "block";
+            toggleButton.textContent = "閉じる";
+          } else {
+            moreContent.style.display = "none";
+            toggleButton.textContent = "続きを読む";
+          }
+        });
+      }
+    });
+  </script>
   <script src="js/app.js" defer></script>
 </body>
 

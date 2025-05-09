@@ -761,6 +761,17 @@ nav .footer__list {
 	text-align: left;
 }
 
+.indent {
+	display: inline-block;
+	width: 1em;
+}
+
+.question::before {
+	content: "Q.";
+	font-weight: bold;
+	margin-right: 0.5em;
+}
+
 /* ========================
    Container Base Style
 ======================== */
@@ -873,6 +884,7 @@ nav .footer__list {
 
 	.w-100-s {
 		width: 100%;
+		height: auto;
 	}
 
 	.back-to-top {
@@ -990,6 +1002,7 @@ nav .footer__list {
 
 	.w-100-s {
 		width: 100%;
+		height: auto;
 	}
 
 	.back-to-top {
@@ -1014,5 +1027,10 @@ nav .footer__list {
 
 	.visible-s {
 		display: block;
+	}
+
+	.sitemap {
+		padding: clamp(7.5rem, 4.392rem + 13.26vw, 15rem) 4rem;
+		font-size: clamp(1rem, 0.767rem + 0.99vw, 1.563rem);
 	}
 }

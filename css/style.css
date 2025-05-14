@@ -776,6 +776,11 @@ nav .footer__list {
 	margin-right: 0.5em;
 }
 
+.row-label {
+	width: 100px;
+	white-space: nowrap;
+}
+
 /* ========================
    Container Base Style
 ======================== */

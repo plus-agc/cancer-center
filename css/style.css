@@ -781,6 +781,10 @@ nav .footer__list {
 	white-space: nowrap;
 }
 
+caption {
+	display: none;
+}
+
 /* ========================
    Container Base Style
 ======================== */

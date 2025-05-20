@@ -3,9 +3,8 @@
 	"version": "0.0.1",
 	"description": "",
 	"private": true,
-	"keywords": [
-		""
-	],
+	"packageManager": "pnpm@10.11.0",
+	"keywords": [""],
 	"license": "",
 	"author": "",
 	"scripts": {

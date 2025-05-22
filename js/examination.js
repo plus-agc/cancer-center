@@ -3,7 +3,7 @@ const BASE_URL = 'https://oz7k2ubljd.microcms.io/api/v1/';
 
 function insertMiddleBreak(text) {
     const middle = Math.floor(text.length / 2);
-    return text.slice(0, middle) + '<br>' + text.slice(middle);
+    return `${text.slice(0, middle)}<br>${text.slice(middle)}`;
 }
 
 async function fetchData(endpoint) {
@@ -16,19 +16,16 @@ async function fetchData(endpoint) {
 
 function createHeaderRow(data) {
     const row = document.createElement('tr');
-    row.innerHTML = `<th class="main-title" colspan="7"></th>` +
-        data.map(item => `<th class="examination_title">${insertMiddleBreak(item.title)}</th>`).join('');
+    row.innerHTML = `<th class="main-title" colspan="7"></th>${data.map(item => `<th class="examination_title">${insertMiddleBreak(item.title)}</th>`).join('')}`;
     return row;
 }
 
 function createBodyRows(data) {
     const geneRow = document.createElement('tr');
-    geneRow.innerHTML = `<th colspan="7">遺伝子数</th>` +
-        data.map(item => `<td class="examination_gene">${item.gene}</td>`).join('');
+    geneRow.innerHTML = `<th colspan="7">遺伝子数</th>${data.map(item => `<td class="examination_gene">${item.gene}</td>`).join('')}`;
 
     const bloodRow = document.createElement('tr');
-    bloodRow.innerHTML = `<th colspan="7">採血</th>` +
-        data.map(item => `<td class="examination_select">${item.blood}</td>`).join('');
+    bloodRow.innerHTML = `<th colspan="7">採血</th>${data.map(item => `<td class="examination_select">${item.blood}</td>`).join('')}`;
 
     return [geneRow, bloodRow];
 }
@@ -43,8 +40,12 @@ function createBodyRows(data) {
     const bloodBody = document.getElementById('blood-test-table-body');
 
     tissueHeader.replaceWith(createHeaderRow(tissueData));
-    createBodyRows(tissueData).forEach(row => tissueBody.appendChild(row));
+    for (const row of createBodyRows(tissueData)) {
+        tissueBody.appendChild(row);
+    }
 
     bloodHeader.replaceWith(createHeaderRow(bloodData));
-    createBodyRows(bloodData).forEach(row => bloodBody.appendChild(row));
+    for (const row of createBodyRows(bloodData)) {
+        bloodBody.appendChild(row);
+    }
 })();

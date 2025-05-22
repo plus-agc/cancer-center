@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+	// ページが examination.html でなければ early return（検査系の処理を避ける）
+	if (!location.pathname.includes("examination.html")) return;
 	// ドロップダウンメニューの動作を設定
 	const dropdowns = document.querySelectorAll(".dropdown");
 

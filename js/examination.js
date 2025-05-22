@@ -39,12 +39,22 @@ function createBodyRows(data) {
     const tissueBody = document.getElementById('tissue-test-table-body');
     const bloodBody = document.getElementById('blood-test-table-body');
 
-    tissueHeader.replaceWith(createHeaderRow(tissueData));
+    // いずれかの要素が存在しない場合、以降の処理を実行しない
+    if (!tissueHeader || !bloodHeader || !tissueBody || !bloodBody) {
+        console.debug('examination.js: 必要なDOM要素が存在しないためスクリプトを中断');
+        return;
+    }
+
+    if (tissueHeader) {
+        tissueHeader.replaceWith(createHeaderRow(tissueData));
+    }
     for (const row of createBodyRows(tissueData)) {
         tissueBody.appendChild(row);
     }
 
-    bloodHeader.replaceWith(createHeaderRow(bloodData));
+    if (bloodHeader) {
+        bloodHeader.replaceWith(createHeaderRow(bloodData));
+    }
     for (const row of createBodyRows(bloodData)) {
         bloodBody.appendChild(row);
     }

@@ -789,7 +789,7 @@ caption {
    Container Base Style
 ======================== */
 .container {
-	width: min(max(23.4375rem, 10vw), 80rem);
+	width: 80rem;
 	margin: 0 auto;
 }
 

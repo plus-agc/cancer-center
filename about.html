@@ -130,11 +130,14 @@
             </h2>
           </div>
           <div class="flex-1">
-            <p>
+            <p class="expert-panel-original">
               弘前大学医学部附属病院は2019年9月に厚生労働省から「がんゲノム医療拠点病院」の指定を受け、同年10月に腫瘍センター内に「がんゲノム医療室」を開設しました。
               各領域の医師、薬剤師、看護師等多職種で構成される組織で、「エキスパートパネル」を毎週開催しております。
             </p>
-            <a href="#" id="expertButton" class="button">エキスパートパネルとは？</a>
+            <div class="toggle-info-content mb-5" style="display:none; margin-top:1em;">
+              がん遺伝子パネル検査で得られた結果について検討する会議
+            </div>
+            <a href="#" class="toggle-info-button button">エキスパートパネルとは？</a>
           </div>
         </div>
       </div>
@@ -271,6 +274,27 @@
           });
         }
       });
+
+      // エキスパートパネルとは？のトグル切り替え
+      const expertPanelButton = document.querySelector('.toggle-info-button');
+      const expertPanelOriginal = document.querySelector('.expert-panel-original');
+      const expertPanelContent = document.querySelector('.toggle-info-content');
+      let expertPanelToggled = false;
+      if (expertPanelButton && expertPanelOriginal && expertPanelContent) {
+        expertPanelButton.addEventListener('click', function (e) {
+          e.preventDefault();
+          expertPanelToggled = !expertPanelToggled;
+          if (expertPanelToggled) {
+            expertPanelOriginal.style.display = 'none';
+            expertPanelContent.style.display = 'block';
+            expertPanelButton.textContent = '閉じる';
+          } else {
+            expertPanelOriginal.style.display = 'block';
+            expertPanelContent.style.display = 'none';
+            expertPanelButton.textContent = 'エキスパートパネルとは？';
+          }
+        });
+      }
     });
   </script>
   <script src="js/app.js" defer></script>

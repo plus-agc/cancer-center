@@ -116,7 +116,7 @@ h3 {
 }
 
 .profile {
-	font-size: clamp(0.625rem, 0.496rem + 0.55vw, 0.938rem);
+	font-size: 16px;
 	text-align: center;
 	line-height: 1.4;
 }
